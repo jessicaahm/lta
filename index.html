@@ -663,6 +663,14 @@
       font-size: 18px;
     }
 
+    .secret-alert-icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      object-fit: contain;
+    }
+
     .secret-question a {
       color: #9ee8f3;
       text-decoration-thickness: 1px;
@@ -974,12 +982,15 @@
     }
 
     .top-grid {
+      grid-template-columns: 1fr;
       border-color: var(--hc-gray-300);
     }
 
     .sidebar {
       background: var(--hc-gray-100);
       border-color: #c9cacc;
+      border-right: 0;
+      border-bottom: 1px solid #c9cacc;
     }
 
     .sidebar h2,
@@ -1140,6 +1151,363 @@
       color: var(--hc-black);
       background: var(--hc-yellow-soft);
       border-left-color: var(--hc-yellow);
+    }
+
+    .journey-section {
+      padding: 24px 18px 20px;
+      background: #fff;
+    }
+
+    .journey-eyebrow {
+      color: #00766f;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .journey-section > h2 {
+      margin: 7px 0 14px;
+      color: var(--hc-black);
+      font-size: clamp(24px, 3vw, 37px);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+    .journey-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .journey-card {
+      min-height: 105px;
+      padding: 17px 14px 14px;
+      background: #eeeeec;
+      border-top: 3px solid #008f85;
+    }
+
+    .journey-card .journey-number {
+      display: block;
+      margin-bottom: 13px;
+      color: #00766f;
+      font-size: 8.5px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .journey-card h3 {
+      margin: 0 0 6px;
+      color: var(--hc-black);
+      font-size: 13px;
+      line-height: 1.15;
+    }
+
+    .journey-card p {
+      margin: 0;
+      color: #5a646b;
+      font-size: 9.5px;
+      line-height: 1.4;
+    }
+
+    .journey-highlight {
+      padding: 0 2px;
+      background: #d8d9d7;
+    }
+
+    .coordinator-chat {
+      overflow: hidden;
+      margin-top: 14px;
+      border: 1px solid #8e9ba0;
+      background: #e9edec;
+    }
+
+    .coordinator-chat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 49px;
+      padding: 9px 14px;
+      color: #fff;
+      background: #111f29;
+      border-left: 5px solid var(--hc-yellow);
+    }
+
+    .coordinator-identity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .coordinator-avatar {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 44px;
+      flex: 0 0 34px;
+    }
+
+    .coordinator-avatar img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .coordinator-status {
+      width: 8px;
+      height: 8px;
+      background: #53e0ab;
+      border: 1px solid #d8fff0;
+      border-radius: 50%;
+    }
+
+    .conversation {
+      padding: 16px 16px 15px;
+      background: #e7ebea;
+    }
+
+    .owner-message {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+
+    .owner-message-content {
+      max-width: 72%;
+      text-align: right;
+    }
+
+    .message-meta {
+      margin-bottom: 5px;
+      color: #68747a;
+      font-size: 8px;
+      font-weight: 700;
+    }
+
+    .owner-bubble {
+      display: inline-block;
+      padding: 11px 14px;
+      color: #fff;
+      background: #008f85;
+      border-radius: 17px 4px 17px 17px;
+      font-size: 10px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .owner-avatar {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      color: #fff;
+      background: #008f85;
+      border-radius: 50%;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .agent-message {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+
+    .agent-message-content {
+      max-width: 84%;
+    }
+
+    .agent-bubble {
+      display: inline-block;
+      padding: 11px 13px;
+      color: var(--hc-black);
+      background: #fff;
+      border: 1px solid #dfe2e1;
+      border-radius: 4px 16px 16px 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    .journey-vehicle {
+      overflow: hidden;
+      margin-top: 9px;
+      background: #fff;
+      border: 1px solid #cfd5d5;
+      border-radius: 3px 3px 13px 13px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    }
+
+    .journey-vehicle .vehicle-title {
+      padding: 9px 12px 7px;
+      margin: 0;
+      border-bottom: 1px solid #dce0e0;
+    }
+
+    .journey-vehicle .check-row {
+      padding: 6px 12px;
+    }
+
+    .journey-vehicle .check-row b::before {
+      width: auto;
+      height: auto;
+      color: #008f85;
+      background: transparent;
+      font-size: 10px;
+    }
+
+    .journey-input {
+      display: grid;
+      grid-template-columns: 20px 1fr auto;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      padding: 8px 10px;
+      background: #fff;
+      border: 1px solid #c7cdce;
+      border-radius: 3px;
+      color: #7b858a;
+      font-size: 9px;
+    }
+
+    .journey-input button {
+      padding: 8px 15px;
+      color: var(--hc-black);
+      background: var(--hc-yellow);
+      border: 0;
+      border-radius: 2px;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .engineered-controls {
+      padding: 25px 18px 20px;
+      background: #f3f2ed;
+      border-top: 1px solid #d3d2cd;
+    }
+
+    .control-model-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 14px;
+    }
+
+    .control-model-eyebrow {
+      color: #006f70;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .control-model-head h2 {
+      margin: 7px 0 0;
+      color: var(--hc-black);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 600;
+      line-height: 1.03;
+      letter-spacing: -.045em;
+    }
+
+    .control-model-head p {
+      max-width: 490px;
+      margin: 0 0 2px;
+      color: #59616a;
+      font-size: 11px;
+      text-align: right;
+    }
+
+    .control-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      background: #c8c9ca;
+      border: 1px solid #c8c9ca;
+    }
+
+    .control-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 194px;
+      padding: 28px 20px 15px;
+      background: #fff;
+    }
+
+    .control-number {
+      position: absolute;
+      top: 10px;
+      right: 13px;
+      color: #b7b9bb;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .control-product {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-right: 24px;
+      margin-bottom: 17px;
+      color: #006f70;
+      font-size: 8.5px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .control-vault-mark {
+      color: var(--hc-yellow);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .control-radar-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 16px;
+      height: 16px;
+      color: #a27300;
+      border: 1px solid var(--hc-yellow);
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    .control-card h3 {
+      margin: 0 0 10px;
+      color: var(--hc-black);
+      font-size: 16px;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+    .control-card p {
+      margin: 0;
+      color: #53606b;
+      font-size: 10px;
+      line-height: 1.45;
+    }
+
+    .control-question {
+      padding-top: 12px;
+      margin-top: auto;
+      color: var(--hc-black);
+      border-top: 1px solid #cfd1d2;
+      font-size: 8.5px;
+      font-weight: 800;
     }
 
     .solution {
@@ -1320,6 +1688,10 @@
       .header-note { text-align: left; }
       .top-grid { grid-template-columns: 1fr; }
       .sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
+      .control-model-head { align-items: flex-start; flex-direction: column; }
+      .control-model-head p { text-align: left; }
+      .control-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .agent-message-content { max-width: 92%; }
       .workflow { grid-template-columns: repeat(2, 1fr); }
       .step:not(:last-child)::after { display: none; }
       .developer-grid { grid-template-columns: 1fr; }
@@ -1335,6 +1707,11 @@
       .action-grid {
         grid-template-columns: 1fr;
       }
+      .control-grid { grid-template-columns: 1fr; }
+      .journey-cards { grid-template-columns: 1fr; }
+      .owner-message-content,
+      .agent-message-content { max-width: 100%; }
+      .conversation { padding: 11px; }
       .identity-banner { grid-template-columns: 22px 1fr; }
       .triad { grid-column: 1 / -1; }
       .chat, .scan, .code-window { grid-template-columns: 1fr; }
@@ -1367,61 +1744,76 @@
     </header>
 
     <section class="top-grid" aria-label="User journey and identity risks">
-      <aside class="sidebar">
-        <h2>User Stories · Road Tax Renewal Coordinator</h2>
+      <aside class="sidebar journey-section">
+        <div class="journey-eyebrow">User stories · Road Tax Renewal Coordinator</div>
+        <h2>One journey, with the owner still in control</h2>
 
-        <article class="story-card">
-          <div class="story-icon">⌁</div>
-          <div>
-            <h3>Know my renewal readiness</h3>
-            <p>As a vehicle owner, I want one view of every prerequisite so I know what is missing before I renew.</p>
-          </div>
-        </article>
-
-        <article class="story-card">
-          <div class="story-icon">⚑</div>
-          <div>
-            <h3>Resolve the right next action</h3>
-            <p>As a vehicle owner, I want the coordinator to guide and recover my journey so I do not repeat checks or navigate multiple services.</p>
-          </div>
-        </article>
-
-        <article class="story-card">
-          <div class="story-icon">✓</div>
-          <div>
-            <h3>Complete renewal with control</h3>
-            <p>As a vehicle owner, I want the agent to request my approval before privileged actions and execute within my selected scope.</p>
-          </div>
-        </article>
-
-        <div class="mockup-label">
-          <h2>Mockup</h2>
-          <span>Illustrative citizen chatbot experience</span>
+        <div class="journey-cards">
+          <article class="journey-card">
+            <span class="journey-number">01 · Readiness</span>
+            <h3>Know what is missing</h3>
+            <p>See every prerequisite before beginning renewal.</p>
+          </article>
+          <article class="journey-card">
+            <span class="journey-number">02 · Guidance</span>
+            <h3>Resolve the next action</h3>
+            <p>Move across services without repeating checks.</p>
+          </article>
+          <article class="journey-card">
+            <span class="journey-number">03 · Control</span>
+            <h3><span class="journey-highlight">Approve privileged action</span></h3>
+            <p>Authorize only the specific payment requested.</p>
+          </article>
         </div>
 
-        <div class="mockup">
-          <div class="mock-window">
-            <div class="mock-head">
-              <div class="bot">AI</div>
+        <div class="coordinator-chat" aria-label="Illustrative OneMotoring agent mockup">
+          <div class="coordinator-chat-head">
+            <div class="coordinator-identity">
+              <span class="coordinator-avatar" aria-hidden="true"><img src="assets/bob-standing.png" alt="" /></span>
               Road Tax Renewal Coordinator
             </div>
-            <div class="chat">
-              <div>
-                <div class="bubble"><b>Hello, my vehicle is up for renewal. What do I need to do?</b></div>
-                <div class="bubble">I’ve checked your renewal records. You’re almost ready—your vehicle inspection is the only action still required.</div>
-                <div class="bubble"><b>Next:</b> Choose an inspection centre. I’ll verify your status afterwards and notify you when payment is available.</div>
+            <span class="coordinator-status" aria-label="Agent online"></span>
+          </div>
+
+          <div class="conversation">
+            <div class="owner-message">
+              <div class="owner-message-content">
+                <div class="message-meta">Vehicle owner · 09:41</div>
+                <div class="owner-bubble">What do I need to renew vehicle 1234?</div>
               </div>
-              <div class="vehicle">
-                <div class="vehicle-title">
-                  <span>Vehicle · 1234</span>
-                  <span class="status">1 action needed</span>
+              <span class="owner-avatar" aria-hidden="true">VO</span>
+            </div>
+
+            <div class="agent-message">
+              <span class="coordinator-avatar" aria-hidden="true"><img src="assets/bob-standing.png" alt="" /></span>
+              <div class="agent-message-content">
+                <div class="message-meta">Road Tax Renewal Coordinator · 09:41</div>
+                <div class="agent-bubble">I’ve checked the records you authorized. Insurance and fines are clear; vehicle inspection is the only outstanding action.</div>
+                <div class="journey-vehicle">
+                  <div class="vehicle-title">
+                    <span>Vehicle · 1234</span>
+                    <span class="status">1 action needed</span>
+                  </div>
+                  <div class="check-row"><b>Insurance</b><span>Valid</span></div>
+                  <div class="check-row"><b>Inspection</b><span>Required</span></div>
+                  <div class="check-row"><b>Outstanding fines</b><span>None</span></div>
+                  <div class="check-row"><b>Road-tax payment</b><span>After inspection</span></div>
                 </div>
-                <div class="check-row"><b>Vehicle insurance</b><span>Valid</span></div>
-                <div class="check-row"><b>Vehicle inspection</b><span>Required</span></div>
-                <div class="check-row"><b>Outstanding fines</b><span>None found</span></div>
-                <div class="check-row"><b>Road tax payment</b><span>After inspection</span></div>
-                <span class="mini-btn">Find an inspection centre</span>
               </div>
+            </div>
+
+            <div class="agent-message">
+              <span class="coordinator-avatar" aria-hidden="true"><img src="assets/bob-standing.png" alt="" /></span>
+              <div class="agent-message-content">
+                <div class="message-meta">Road Tax Renewal Coordinator · 09:42</div>
+                <div class="agent-bubble">Would you like me to find an inspection centre and notify you when payment is available?</div>
+              </div>
+            </div>
+
+            <div class="journey-input" aria-label="Chat message composer">
+              <span aria-hidden="true">＋</span>
+              <span>Ask about your road-tax renewal…</span>
+              <button type="button" aria-label="Send message">Send</button>
             </div>
           </div>
         </div>
@@ -1434,7 +1826,7 @@
         </div>
 
         <div class="identity-banner owasp-guide">
-          <strong class="owasp-label">OWASP QUICK GUIDE</strong>
+          <strong class="owasp-label">OWASP RISK</strong>
           <div class="triad">
             <div class="triad-item"><strong>ASI01 · Tool Misuse &amp; Exploitation</strong>An agent uses a legitimate tool in an unsafe, unintended or unauthorized way.</div>
             <div class="triad-item"><strong>ASI02 · Identity &amp; Privilege Abuse</strong>An identity, credential or excessive permission is misused to access data or act beyond the authorized scope.</div>
@@ -1500,6 +1892,58 @@
           <span>How can we provide non-repudiation so the owner cannot later deny an approved action?</span>
           <p class="questions-note"><strong>Note:</strong> Just as humans need verifiable identities to be held accountable, agents need unique, verifiable identities so their actions can be attributed, investigated and traced to an accountable owner or operator.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="engineered-controls" aria-labelledby="control-model-title">
+      <div class="control-model-head">
+        <div>
+          <div class="control-model-eyebrow">The engineered control model</div>
+          <h2 id="control-model-title">Five safeguards define the operating envelope</h2>
+        </div>
+        <p>Executive outcomes translated into implementable Vault identity, policy, secret and evidence controls.</p>
+      </div>
+
+      <div class="control-grid">
+        <article class="control-card">
+          <span class="control-number">01</span>
+          <div class="control-product"><span class="control-vault-mark" aria-hidden="true">▼</span>Vault · Workload Identity</div>
+          <h3>Register every agent</h3>
+          <p>Give every agent and workload a unique, verifiable identity tied to an accountable owner.</p>
+          <div class="control-question">Who is acting?</div>
+        </article>
+
+        <article class="control-card">
+          <span class="control-number">02</span>
+          <div class="control-product"><span class="control-vault-mark" aria-hidden="true">▼</span>Vault · Least Privilege</div>
+          <h3>Strip standing privileges</h3>
+          <p>Remove persistent access; issue only the minimum data, tool and credential scope required.</p>
+          <div class="control-question">What may it do?</div>
+        </article>
+
+        <article class="control-card">
+          <span class="control-number">03</span>
+          <div class="control-product"><span class="control-vault-mark" aria-hidden="true">▼</span>Vault · Identity + Policy</div>
+          <h3>Tie actions to intent</h3>
+          <p>Bind vehicle, purpose, amount and action to the owner’s transaction-specific approval.</p>
+          <div class="control-question">Was this intended?</div>
+        </article>
+
+        <article class="control-card">
+          <span class="control-number">04</span>
+          <div class="control-product"><span class="control-vault-mark" aria-hidden="true">▼</span>Vault · Dynamic Secrets</div>
+          <h3>Enforce point of use</h3>
+          <p>Evaluate policy and deliver short-lived access only when the approved action is executed.</p>
+          <div class="control-question">Can it act now?</div>
+        </article>
+
+        <article class="control-card">
+          <span class="control-number">05</span>
+          <div class="control-product"><span class="control-vault-mark" aria-hidden="true">▼</span><span class="control-radar-mark" aria-hidden="true">◎</span>Vault + Radar · Evidence</div>
+          <h3>Produce proof of control</h3>
+          <p>Link identity, policy, consent, credential use and result in a tamper-evident record.</p>
+          <div class="control-question">Can we prove it?</div>
+        </article>
       </div>
     </section>
 
@@ -1591,8 +2035,8 @@
     <div class="divider">WHY YOU NEED RADAR AND VAULT FOR PROTECTING AGENT AND APPLICATION SECRETS</div>
 
     <div class="secret-question">
-      <span class="secret-key" aria-hidden="true">⚿</span>
-      <div><strong>If you protect your house key, how are you protecting your secrets? Regardless of whether you are using AI today,</strong> <a href="https://owasp.org/www-project-non-human-identities-top-10/2025/2-secret-leakage/" target="_blank" rel="noopener noreferrer">NHI2:2025 - Secret Leakage</a> remains the top risk to your most precious asset—your data.</div>
+      <img class="secret-alert-icon" src="data:image/png;base64,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" alt="" />
+      <div><strong>If you protect your house key, how are you protecting your secrets? Regardless of whether you are using AI today,</strong> <a href="https://owasp.org/www-project-non-human-identities-top-10/2025/2-secret-leakage/" target="_blank" rel="noopener noreferrer">NHI2:2025 - Secret Leakage</a> remains the top risk to your most precious asset—your secret.</div>
     </div>
 
     <section class="metric-strip" aria-labelledby="metric-heading">
